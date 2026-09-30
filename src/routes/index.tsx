@@ -48,7 +48,7 @@ function Index() {
             <span className="grid size-10 place-items-center rounded-full bg-gold-gradient font-display text-xl font-semibold text-primary-foreground shadow-gold">
               ✦
             </span>
-            <span className="font-display text-2xl italic text-foreground">Studio Nails &amp; Cílios</span>
+            <span className="font-display text-2xl italic text-foreground">Tayzaslzr_nails</span>
           </a>
           <div className="hidden items-center gap-8 text-sm font-medium text-muted-foreground md:flex">
             <a href="#servicos" className="transition hover:text-gold">Serviços</a>
@@ -153,7 +153,7 @@ function Index() {
                 Alongamento em gel, esmaltação em gel e nail art personalizada, com
                 brilho de espelho e cutícula impecável.
               </p>
-              <p className="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-gold">a partir de R$ 120</p>
+              <p className="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-gold">A PARTIR DE R$ 50</p>
             </div>
             <div className="rounded-3xl border border-gold/25 bg-surface p-7 backdrop-blur-2xl transition hover:border-gold/50 hover:shadow-gold">
               <span className="grid size-12 place-items-center rounded-2xl bg-gold-gradient text-xl text-primary-foreground shadow-gold">❀</span>
@@ -162,7 +162,7 @@ function Index() {
                 Alongamento fio a fio e volume russo sob medida, com curvatura e
                 espessura pensadas para o seu olhar.
               </p>
-              <p className="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-gold">a partir de R$ 150</p>
+              <p className="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-gold">A PARTIR DE R$ 75</p>
             </div>
             <div className="rounded-3xl border border-gold/25 bg-surface p-7 backdrop-blur-2xl transition hover:border-gold/50 hover:shadow-gold">
               <span className="grid size-12 place-items-center rounded-2xl bg-gold-gradient text-xl text-primary-foreground shadow-gold">✦</span>
@@ -171,7 +171,7 @@ function Index() {
                 Preenchimento, repreenchimento e hidratação no intervalo ideal —
                 para o seu resultado durar muito mais.
               </p>
-              <p className="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-gold">a partir de R$ 90</p>
+              <p className="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-gold">A PARTIR DE R$ 55</p>
             </div>
           </div>
         </section>
@@ -263,7 +263,7 @@ function Index() {
                 rel="noreferrer"
                 className="rounded-full border border-gold/40 px-9 py-4 text-sm font-semibold text-gold transition hover:border-gold hover:shadow-gold"
               >
-                @seu.perfil
+                @tayzaslzr_nails
               </a>
             </div>
           </div>
@@ -271,7 +271,7 @@ function Index() {
 
         {/* Footer */}
         <footer className="flex flex-col items-center justify-between gap-3 border-t border-gold/20 py-8 text-sm text-muted-foreground sm:flex-row">
-          <span className="font-display text-xl italic text-foreground">Studio Nails &amp; Cílios</span>
+          <span className="font-display text-xl italic text-foreground">TayzaSlzr_Nails</span>
           <span>Unhas · Cílios · Manutenção</span>
         </footer>
       </div>
