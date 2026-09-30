@@ -188,7 +188,7 @@ function Index() {
                 Design de sombrancelha com henna, alinhando formato, preenchimento
                 e simetria para um olhar marcado e natural.
               </p>
-              <p className="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-gold">A PARTIR DE R$ 45</p>
+              <p className="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-gold">{"A PARTIR DE R$ 45\n\n"}</p>
             </div>
           </div>
         </section>
