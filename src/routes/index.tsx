@@ -1,24 +1,280 @@
 import { createFileRoute } from "@tanstack/react-router";
+import heroImg from "@/assets/hero.jpg";
+import galleryNails from "@/assets/gallery-nails.jpg";
+import galleryLashes from "@/assets/gallery-lashes.jpg";
+import galleryMaintenance from "@/assets/gallery-maintenance.jpg";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "A arte de cuidar de você — Unhas, Cílios e Manutenção" },
+      {
+        name: "description",
+        content:
+          "Alongamento de unhas, esmaltação em gel, volume russo e manutenção no ritmo certo. Agende seu horário pelo WhatsApp.",
+      },
+      { property: "og:title", content: "A arte de cuidar de você — Unhas, Cílios e Manutenção" },
+      {
+        property: "og:description",
+        content:
+          "Unhas, cílios e manutenção com acabamento impecável. Agende pelo WhatsApp.",
+      },
+      { property: "og:url", content: "/" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
+const WHATSAPP_URL = "https://wa.me/5500000000000";
+const INSTAGRAM_URL = "https://instagram.com/seu.perfil";
+
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="relative min-h-screen overflow-hidden bg-background">
+      {/* Ambient glow */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+        <div className="glow-ambient animate-float -left-40 -top-40 size-[34rem] bg-primary/25" />
+        <div className="glow-ambient animate-float -right-40 top-1/3 size-[36rem] bg-accent/60" />
+        <div className="glow-ambient bottom-0 left-1/4 size-[30rem] bg-primary/15" />
+      </div>
+
+      <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
+        {/* Nav */}
+        <nav className="flex items-center justify-between py-7">
+          <a href="/" className="flex items-center gap-2.5">
+            <span className="grid size-10 place-items-center rounded-full bg-gold-gradient font-display text-xl font-semibold text-primary-foreground shadow-gold">
+              ✦
+            </span>
+            <span className="font-display text-2xl italic text-foreground">Studio Nails &amp; Cílios</span>
+          </a>
+          <div className="hidden items-center gap-8 text-sm font-medium text-muted-foreground md:flex">
+            <a href="#servicos" className="transition hover:text-gold">Serviços</a>
+            <a href="#resultados" className="transition hover:text-gold">Resultados</a>
+            <a href="#manutencao" className="transition hover:text-gold">Manutenção</a>
+          </div>
+          <a
+            href="#agendar"
+            className="rounded-full border border-gold/40 bg-surface px-5 py-2 text-sm font-semibold text-gold backdrop-blur-xl transition hover:border-gold hover:shadow-gold"
+          >
+            Agendar
+          </a>
+        </nav>
+
+        {/* Hero */}
+        <section className="grid items-center gap-14 py-14 lg:grid-cols-[1.05fr_.95fr] lg:py-20">
+          <div>
+            <span className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-surface px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-gold backdrop-blur-xl">
+              Unhas · Cílios · Manutenção
+            </span>
+            <h1 className="mt-7 font-display text-6xl leading-[0.95] sm:text-7xl lg:text-8xl">
+              <span className="text-gold-gradient font-semibold drop-shadow-[0_2px_24px_rgba(0,0,0,0.45)]">
+                A arte de
+                <br />
+                cuidar de você
+              </span>
+            </h1>
+            <p className="mt-6 max-w-md text-lg leading-relaxed text-muted-foreground">
+              Alongamento, volume russo e manutenção no ritmo certo — um ritual de
+              beleza feito com técnica, delicadeza e acabamento impecável.
+            </p>
+            <div className="mt-9 flex flex-wrap gap-4">
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full bg-gold-gradient px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-gold transition hover:-translate-y-0.5"
+              >
+                Agendar horário
+              </a>
+              <a
+                href="#servicos"
+                className="rounded-full border border-gold/40 bg-surface px-7 py-3.5 text-sm font-semibold text-gold backdrop-blur-xl transition hover:border-gold"
+              >
+                Ver serviços
+              </a>
+            </div>
+            <div className="mt-12 flex divide-x divide-gold/25">
+              <div className="pr-7">
+                <p className="font-display text-4xl text-gold">1.2k</p>
+                <p className="mt-1 text-xs uppercase tracking-[0.14em] text-muted-foreground">Clientes felizes</p>
+              </div>
+              <div className="px-7">
+                <p className="font-display text-4xl text-gold">4,9</p>
+                <p className="mt-1 text-xs uppercase tracking-[0.14em] text-muted-foreground">Avaliação</p>
+              </div>
+              <div className="pl-7">
+                <p className="font-display text-4xl text-gold">6+</p>
+                <p className="mt-1 text-xs uppercase tracking-[0.14em] text-muted-foreground">Anos de arte</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative">
+            <div className="relative z-10 overflow-hidden rounded-[2.5rem] border border-gold/30 shadow-deep">
+              <img
+                src={heroImg}
+                alt="Cliente com cílios alongados e unhas em gel, fundo roxo com luz dourada"
+                className="aspect-[4/5] w-full object-cover"
+                width={1024}
+                height={1024}
+              />
+            </div>
+            <div className="absolute -left-4 top-10 z-20 w-52 rounded-2xl border border-gold/30 bg-surface p-4 shadow-deep backdrop-blur-2xl sm:-left-8">
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gold">Agora no studio</p>
+              <p className="mt-2 font-display text-2xl leading-tight text-foreground">Alongamento em gel</p>
+              <p className="mt-1 text-sm text-muted-foreground">R$ 180 · 2h</p>
+            </div>
+            <div className="absolute -right-2 bottom-8 z-20 flex items-center gap-3 rounded-2xl border border-gold/30 bg-surface px-4 py-3 shadow-deep backdrop-blur-2xl sm:-right-6">
+              <span className="grid size-9 place-items-center rounded-full bg-gold-gradient text-primary-foreground">✦</span>
+              <div>
+                <p className="text-sm font-semibold text-foreground">Horário livre hoje</p>
+                <p className="text-xs text-muted-foreground">14:30 · 16:00</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Serviços */}
+        <section id="servicos" className="scroll-mt-8 py-16">
+          <div className="mb-12 flex items-end justify-between gap-4">
+            <h2 className="font-display text-4xl font-semibold tracking-tight sm:text-5xl">
+              <span className="text-gold-gradient">O que o studio faz</span>
+            </h2>
+            <span className="hidden text-sm text-muted-foreground sm:block">3 serviços · 1 técnica</span>
+          </div>
+          <div className="grid gap-5 md:grid-cols-3">
+            <div className="rounded-3xl border border-gold/25 bg-surface p-7 backdrop-blur-2xl transition hover:border-gold/50 hover:shadow-gold">
+              <span className="grid size-12 place-items-center rounded-2xl bg-gold-gradient text-xl text-primary-foreground shadow-gold">✧</span>
+              <h3 className="mt-5 font-display text-3xl text-foreground">Unhas</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                Alongamento em gel, esmaltação em gel e nail art personalizada, com
+                brilho de espelho e cutícula impecável.
+              </p>
+              <p className="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-gold">a partir de R$ 120</p>
+            </div>
+            <div className="rounded-3xl border border-gold/25 bg-surface p-7 backdrop-blur-2xl transition hover:border-gold/50 hover:shadow-gold">
+              <span className="grid size-12 place-items-center rounded-2xl bg-gold-gradient text-xl text-primary-foreground shadow-gold">❀</span>
+              <h3 className="mt-5 font-display text-3xl text-foreground">Cílios</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                Alongamento fio a fio e volume russo sob medida, com curvatura e
+                espessura pensadas para o seu olhar.
+              </p>
+              <p className="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-gold">a partir de R$ 150</p>
+            </div>
+            <div className="rounded-3xl border border-gold/25 bg-surface p-7 backdrop-blur-2xl transition hover:border-gold/50 hover:shadow-gold">
+              <span className="grid size-12 place-items-center rounded-2xl bg-gold-gradient text-xl text-primary-foreground shadow-gold">✦</span>
+              <h3 className="mt-5 font-display text-3xl text-foreground">Manutenção</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                Preenchimento, repreenchimento e hidratação no intervalo ideal —
+                para o seu resultado durar muito mais.
+              </p>
+              <p className="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-gold">a partir de R$ 90</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Resultados */}
+        <section id="resultados" className="scroll-mt-8 py-16">
+          <div className="mb-12 flex items-end justify-between gap-4">
+            <h2 className="font-display text-4xl font-semibold tracking-tight sm:text-5xl">
+              <span className="text-gold-gradient">Resultados reais</span>
+            </h2>
+            <span className="hidden text-sm text-muted-foreground sm:block">@seu.perfil</span>
+          </div>
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+            <div className="overflow-hidden rounded-2xl border border-gold/25 shadow-deep">
+              <img src={galleryNails} alt="Unhas em gel nude com detalhes em ouro" loading="lazy" width={768} height={1024} className="aspect-[3/4] w-full object-cover transition duration-500 hover:scale-105" />
+            </div>
+            <div className="overflow-hidden rounded-2xl border border-gold/25 shadow-deep">
+              <img src={galleryLashes} alt="Cílios volume russo, close-up" loading="lazy" width={768} height={1024} className="aspect-[3/4] w-full object-cover transition duration-500 hover:scale-105" />
+            </div>
+            <div className="overflow-hidden rounded-2xl border border-gold/25 shadow-deep">
+              <img src={galleryMaintenance} alt="Manutenção de unhas em gel no studio" loading="lazy" width={768} height={1024} className="aspect-[3/4] w-full object-cover transition duration-500 hover:scale-105" />
+            </div>
+            <div className="overflow-hidden rounded-2xl border border-gold/25 shadow-deep">
+              <img src={heroImg} alt="Resultado completo de unhas e cílios" loading="lazy" width={768} height={1024} className="aspect-[3/4] w-full object-cover transition duration-500 hover:scale-105" />
+            </div>
+          </div>
+        </section>
+
+        {/* Manutenção */}
+        <section id="manutencao" className="scroll-mt-8 py-16">
+          <div className="grid items-center gap-12 rounded-[2.5rem] border border-gold/25 bg-surface p-10 shadow-deep backdrop-blur-2xl lg:grid-cols-2 lg:p-14">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Cadência de manutenção</p>
+              <h2 className="mt-3 font-display text-4xl font-semibold tracking-tight sm:text-5xl">
+                <span className="text-gold-gradient">O brilho que dura</span>
+              </h2>
+              <p className="mt-4 max-w-md leading-relaxed text-muted-foreground">
+                Cada serviço tem seu ritmo. Encaixe a manutenção no tempo certo e
+                seu resultado nunca perde o acabamento.
+              </p>
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-7 inline-flex rounded-full bg-gold-gradient px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-gold transition hover:-translate-y-0.5"
+              >
+                Agendar manutenção
+              </a>
+            </div>
+            <ul className="divide-y divide-gold/20">
+              {[
+                { label: "Top coat novo", cadence: "a cada 15 dias" },
+                { label: "Preenchimento de unhas", cadence: "a cada 21 dias" },
+                { label: "Repreenchimento de cílios", cadence: "a cada 14 dias" },
+                { label: "Hidratação profunda", cadence: "a cada 30 dias" },
+              ].map((item) => (
+                <li key={item.label} className="flex items-center justify-between gap-4 py-4">
+                  <span className="font-medium text-foreground">{item.label}</span>
+                  <span className="text-sm text-muted-foreground">{item.cadence}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* Agendar */}
+        <section id="agendar" className="scroll-mt-8 py-20">
+          <div className="flex flex-col items-center rounded-[2.5rem] border border-gold/30 bg-surface p-12 text-center shadow-deep backdrop-blur-2xl">
+            <span className="grid size-14 place-items-center rounded-full bg-gold-gradient text-2xl text-primary-foreground shadow-gold">✦</span>
+            <h2 className="mt-6 font-display text-5xl italic leading-tight sm:text-6xl">
+              <span className="text-gold-gradient">Pronta para brilhar?</span>
+            </h2>
+            <p className="mt-4 max-w-sm text-muted-foreground">
+              Me chama no WhatsApp ou pelo Instagram — respondo em horário de
+              atendimento.
+            </p>
+            <div className="mt-8 flex flex-wrap justify-center gap-4">
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full bg-gold-gradient px-9 py-4 text-sm font-semibold text-primary-foreground shadow-gold transition hover:-translate-y-0.5"
+              >
+                Chamar no WhatsApp
+              </a>
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full border border-gold/40 px-9 py-4 text-sm font-semibold text-gold transition hover:border-gold hover:shadow-gold"
+              >
+                @seu.perfil
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className="flex flex-col items-center justify-between gap-3 border-t border-gold/20 py-8 text-sm text-muted-foreground sm:flex-row">
+          <span className="font-display text-xl italic text-foreground">Studio Nails &amp; Cílios</span>
+          <span>Unhas · Cílios · Manutenção</span>
+        </footer>
+      </div>
     </div>
   );
 }
