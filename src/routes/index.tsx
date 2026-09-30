@@ -6,6 +6,7 @@ import galleryLashes from "@/assets/gallery-lashes.jpg";
 import galleryMaintenance from "@/assets/gallery-maintenance.jpg";
 
 const heroTayza = heroTayzaAsset.url;
+const galleryNails = galleryNailsAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
