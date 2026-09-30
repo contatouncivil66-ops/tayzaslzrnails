@@ -1,13 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroImg from "@/assets/hero.jpg";
 import heroTayzaAsset from "@/assets/hero-tayza.jpg.asset.json";
 import galleryNailsAsset from "@/assets/gallery-brown-gold.jpeg.asset.json";
 import galleryMaintenance from "@/assets/gallery-maintenance.jpg";
 import galleryLashesTayzaAsset from "@/assets/gallery-lashes-tayza.jpg.asset.json";
+import galleryLookCompletoAsset from "@/assets/gallery-look-completo.jpg.asset.json";
 
 const heroTayza = heroTayzaAsset.url;
 const galleryNails = galleryNailsAsset.url;
 const galleryLashesTayza = galleryLashesTayzaAsset.url;
+const galleryLookCompleto = galleryLookCompletoAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -200,7 +201,7 @@ function Index() {
               <img src={galleryMaintenance} alt="Manutenção de unhas em gel no studio" loading="lazy" width={768} height={1024} className="aspect-[3/4] w-full object-cover transition duration-500 hover:scale-105" />
             </div>
             <div className="overflow-hidden rounded-2xl border border-gold/25 shadow-deep">
-              <img src={heroImg} alt="Resultado completo de unhas e cílios" loading="lazy" width={768} height={1024} className="aspect-[3/4] w-full object-cover transition duration-500 hover:scale-105" />
+              <img src={galleryLookCompleto} alt="Look completo com unhas em gel feitas no studio" loading="lazy" width={1281} height={1920} className="aspect-[3/4] w-full object-cover transition duration-500 hover:scale-105" />
             </div>
           </div>
         </section>
