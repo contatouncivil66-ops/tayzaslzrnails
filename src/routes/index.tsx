@@ -111,7 +111,7 @@ function Index() {
                 <p className="mt-1 text-xs uppercase tracking-[0.14em] text-muted-foreground">Avaliação</p>
               </div>
               <div className="pl-7">
-                <p className="font-display text-4xl text-gold">6+</p>
+                <p className="font-display text-4xl text-gold">3+</p>
                 <p className="mt-1 text-xs uppercase tracking-[0.14em] text-muted-foreground">Anos de arte</p>
               </div>
             </div>
@@ -187,7 +187,7 @@ function Index() {
             <h2 className="font-display text-4xl font-semibold tracking-tight sm:text-5xl">
               <span className="text-gold-gradient">Resultados reais</span>
             </h2>
-            <span className="hidden text-sm text-muted-foreground sm:block">@seu.perfil</span>
+             <span className="hidden text-sm text-muted-foreground sm:block">@tayzaslzr_nails</span>
           </div>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
             <div className="overflow-hidden rounded-2xl border border-gold/25 shadow-deep">
