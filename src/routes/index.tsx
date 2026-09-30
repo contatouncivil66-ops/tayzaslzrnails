@@ -4,10 +4,12 @@ import heroTayzaAsset from "@/assets/hero-tayza.jpg.asset.json";
 import galleryNailsAsset from "@/assets/gallery-brown-gold.jpeg.asset.json";
 import galleryMaintenance from "@/assets/gallery-maintenance.jpg";
 import galleryLashesTayzaAsset from "@/assets/gallery-lashes-tayza.jpg.asset.json";
+import galleryLookCompletoAsset from "@/assets/gallery-look-completo.jpg.asset.json";
 
 const heroTayza = heroTayzaAsset.url;
 const galleryNails = galleryNailsAsset.url;
 const galleryLashesTayza = galleryLashesTayzaAsset.url;
+const galleryLookCompleto = galleryLookCompletoAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
