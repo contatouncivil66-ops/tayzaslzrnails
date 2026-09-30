@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import heroTayzaAsset from "@/assets/hero-tayza.jpg.asset.json";
 import galleryNailsAsset from "@/assets/gallery-brown-gold.jpeg.asset.json";
@@ -39,6 +40,22 @@ const WHATSAPP_URL = "https://wa.me/5500000000000";
 const INSTAGRAM_URL = "https://instagram.com/seu.perfil";
 
 function Index() {
+  const [flashServices, setFlashServices] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const apply = () => {
+      if (window.location.hash === "#servicos") {
+        setFlashServices(false);
+        requestAnimationFrame(() => setFlashServices(true));
+        window.setTimeout(() => setFlashServices(false), 2600);
+      }
+    };
+    apply();
+    window.addEventListener("hashchange", apply);
+    return () => window.removeEventListener("hashchange", apply);
+  }, []);
+
   return (
     <div className="relative min-h-screen overflow-hidden bg-background">
       {/* Ambient glow */}
@@ -146,7 +163,7 @@ function Index() {
         </section>
 
         {/* Serviços */}
-        <section id="servicos" className="scroll-mt-8 py-16">
+        <section id="servicos" data-flash={flashServices ? "on" : undefined} className="scroll-mt-8 py-16">
           <div className="mb-12 flex items-end justify-between gap-4">
             <h2 className="font-display text-4xl font-semibold tracking-tight sm:text-5xl">
               <span className="text-gold-gradient">O que o studio faz</span>
