@@ -37,7 +37,7 @@ function Index() {
       {/* Ambient glow */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
         <div className="glow-ambient animate-float -left-40 -top-40 size-[34rem] bg-primary/25" />
-        <div className="glow-animate-float glow-ambient -right-40 top-1/3 size-[36rem] bg-accent/60" />
+        <div className="glow-ambient animate-float -right-40 top-1/3 size-[36rem] bg-accent/60" />
         <div className="glow-ambient bottom-0 left-1/4 size-[30rem] bg-primary/15" />
       </div>
 
