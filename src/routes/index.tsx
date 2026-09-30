@@ -74,7 +74,8 @@ function Index() {
         <section className="grid items-center gap-14 py-14 lg:grid-cols-[1.05fr_.95fr] lg:py-20">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-surface px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-gold backdrop-blur-xl">
-              Unhas · Cílios · Manutenção
+              UNHAS · CÍLIOS · SOMBRACELHAS
+· MANUTENÇÃO 
             </span>
             <h1 className="mt-7 font-display text-6xl leading-[0.95] sm:text-7xl lg:text-8xl">
               <span className="text-gold-gradient font-semibold drop-shadow-[0_2px_24px_rgba(0,0,0,0.45)]">
