@@ -1,8 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroImg from "@/assets/hero.jpg";
+import heroTayzaAsset from "@/assets/hero-tayza.jpg.asset.json";
 import galleryNails from "@/assets/gallery-nails.jpg";
 import galleryLashes from "@/assets/gallery-lashes.jpg";
 import galleryMaintenance from "@/assets/gallery-maintenance.jpg";
+
+const heroTayza = heroTayzaAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -115,8 +118,8 @@ function Index() {
           <div className="relative">
             <div className="relative z-10 overflow-hidden rounded-[2.5rem] border border-gold/30 shadow-deep">
               <img
-                src={heroImg}
-                alt="Cliente com cílios alongados e unhas em gel, fundo roxo com luz dourada"
+                src={heroTayza}
+                alt="Unhas em gel nude com nail art dourada, trabalho do studio"
                 className="aspect-[4/5] w-full object-cover"
                 width={1024}
                 height={1024}
