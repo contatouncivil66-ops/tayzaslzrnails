@@ -227,10 +227,10 @@ function Index() {
             </div>
             <ul className="divide-y divide-gold/20">
               {[
-                { label: "Top coat novo", cadence: "a cada 15 dias" },
-                { label: "Preenchimento de unhas", cadence: "a cada 21 dias" },
-                { label: "Repreenchimento de cílios", cadence: "a cada 14 dias" },
-                { label: "Hidratação profunda", cadence: "a cada 30 dias" },
+                { label: "Retoque Design com Henna", cadence: "em 7 em 7 dias" },
+                { label: "Manunteção de unhas", cadence: "de 20 a 35 dias" },
+                { label: "Manunteção  de cílios", cadence: "de 15 a 20 dias" },
+                { label: "", cadence: "" },
               ].map((item) => (
                 <li key={item.label} className="flex items-center justify-between gap-4 py-4">
                   <span className="font-medium text-foreground">{item.label}</span>
