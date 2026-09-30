@@ -90,6 +90,22 @@
     scroll-behavior: smooth;
   }
 
+  /* Gold flash on the services cards when arriving via a link */
+  #servicos[data-flash="on"] .rounded-3xl {
+    animation: gold-pulse 1.8s ease-in-out 0.2s both;
+  }
+
+  @keyframes gold-pulse {
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 transparent;
+    }
+    50% {
+      border-color: var(--color-gold);
+      box-shadow: 0 0 34px 2px oklch(0.84 0.15 87 / 0.28);
+    }
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
