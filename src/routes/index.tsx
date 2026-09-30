@@ -202,7 +202,7 @@ function Index() {
               <img src={galleryMaintenance} alt="Manutenção de unhas em gel no studio" loading="lazy" width={768} height={1024} className="aspect-[3/4] w-full object-cover transition duration-500 hover:scale-105" />
             </div>
             <div className="overflow-hidden rounded-2xl border border-gold/25 shadow-deep">
-              <img src={heroImg} alt="Resultado completo de unhas e cílios" loading="lazy" width={768} height={1024} className="aspect-[3/4] w-full object-cover transition duration-500 hover:scale-105" />
+              <img src={galleryLookCompleto} alt="Look completo com unhas em gel feitas no studio" loading="lazy" width={1281} height={1920} className="aspect-[3/4] w-full object-cover transition duration-500 hover:scale-105" />
             </div>
           </div>
         </section>
