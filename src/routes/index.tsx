@@ -127,7 +127,7 @@ function Index() {
             </div>
             <div className="absolute -left-4 top-10 z-20 w-52 rounded-2xl border border-gold/30 bg-surface p-4 shadow-deep backdrop-blur-2xl sm:-left-8">
               <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gold">Agora no studio</p>
-              <p className="mt-2 font-display text-2xl leading-tight text-foreground">Alongamento em gel molde f1</p>
+              <p className="mt-2 font-display text-3xl font-bold leading-tight text-gold-gradient">Alongamento em gel molde f1</p>
               <p className="mt-1 text-sm text-muted-foreground">R$ 100 · 2h</p>
             </div>
             <div className="absolute -right-2 bottom-8 z-20 flex items-center gap-3 rounded-2xl border border-gold/30 bg-surface px-4 py-3 shadow-deep backdrop-blur-2xl sm:-right-6">
