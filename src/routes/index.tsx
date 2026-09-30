@@ -4,7 +4,7 @@ import galleryNailsAsset from "@/assets/gallery-brown-gold.jpeg.asset.json";
 import galleryLashesCloseupAsset from "@/assets/gallery-lashes-closeup.jpg.asset.json";
 const galleryLashesCloseup = galleryLashesCloseupAsset.url;
 import galleryLashesTayzaAsset from "@/assets/gallery-lashes-tayza.jpg.asset.json";
-import galleryLookCompletoAsset from "@/assets/gallery-look-completo.jpg.asset.json";
+import galleryLashesBrownAsset from "@/assets/gallery-lashes-brown.jpg.asset.json";
 
 const heroTayza = heroTayzaAsset.url;
 const galleryNails = galleryNailsAsset.url;
