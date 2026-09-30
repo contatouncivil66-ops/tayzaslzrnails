@@ -1,11 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroImg from "@/assets/hero.jpg";
 import heroTayzaAsset from "@/assets/hero-tayza.jpg.asset.json";
-import galleryNails from "@/assets/gallery-nails.jpg";
+import galleryNailsAsset from "@/assets/gallery-brown-gold.jpeg.asset.json";
 import galleryLashes from "@/assets/gallery-lashes.jpg";
 import galleryMaintenance from "@/assets/gallery-maintenance.jpg";
 
 const heroTayza = heroTayzaAsset.url;
+const galleryNails = galleryNailsAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -189,7 +190,7 @@ function Index() {
           </div>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
             <div className="overflow-hidden rounded-2xl border border-gold/25 shadow-deep">
-              <img src={galleryNails} alt="Unhas em gel nude com detalhes em ouro" loading="lazy" width={768} height={1024} className="aspect-[3/4] w-full object-cover transition duration-500 hover:scale-105" />
+              <img src={galleryNails} alt="Unhas em gel marrom e nude com nail art dourada" loading="lazy" width={1614} height={1920} className="aspect-[3/4] w-full object-cover transition duration-500 hover:scale-105" />
             </div>
             <div className="overflow-hidden rounded-2xl border border-gold/25 shadow-deep">
               <img src={galleryLashes} alt="Cílios volume russo, close-up" loading="lazy" width={768} height={1024} className="aspect-[3/4] w-full object-cover transition duration-500 hover:scale-105" />
