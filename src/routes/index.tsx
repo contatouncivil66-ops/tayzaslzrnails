@@ -4,12 +4,12 @@ import galleryNailsAsset from "@/assets/gallery-brown-gold.jpeg.asset.json";
 import galleryLashesCloseupAsset from "@/assets/gallery-lashes-closeup.jpg.asset.json";
 const galleryLashesCloseup = galleryLashesCloseupAsset.url;
 import galleryLashesTayzaAsset from "@/assets/gallery-lashes-tayza.jpg.asset.json";
-import galleryLookCompletoAsset from "@/assets/gallery-look-completo.jpg.asset.json";
+import galleryLashesBrownAsset from "@/assets/gallery-lashes-brown.jpg.asset.json";
 
 const heroTayza = heroTayzaAsset.url;
 const galleryNails = galleryNailsAsset.url;
 const galleryLashesTayza = galleryLashesTayzaAsset.url;
-const galleryLookCompleto = galleryLookCompletoAsset.url;
+const galleryLashesBrown = galleryLashesBrownAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -202,7 +202,7 @@ function Index() {
               <img src={galleryLashesCloseup} alt="Extensão de cílios, close-up dos olhos, trabalho do studio" loading="lazy" width={1170} height={1170} className="aspect-[3/4] w-full object-cover transition duration-500 hover:scale-105" />
             </div>
             <div className="overflow-hidden rounded-2xl border border-gold/25 shadow-deep">
-              <img src={galleryLookCompleto} alt="Look completo com unhas em gel feitas no studio" loading="lazy" width={1281} height={1920} className="aspect-[3/4] w-full object-cover transition duration-500 hover:scale-105" />
+              <img src={galleryLashesBrown} alt="Design de sobrancelhas e cílios com extensão, close-up do rosto" loading="lazy" width={820} height={820} className="aspect-[3/4] w-full object-cover transition duration-500 hover:scale-105" />
             </div>
           </div>
         </section>
