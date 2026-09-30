@@ -151,9 +151,9 @@ function Index() {
             <h2 className="font-display text-4xl font-semibold tracking-tight sm:text-5xl">
               <span className="text-gold-gradient">O que o studio faz</span>
             </h2>
-            <span className="hidden text-sm text-muted-foreground sm:block">3 serviços · 1 técnica</span>
+            <span className="hidden text-sm text-muted-foreground sm:block">4 serviços</span>
           </div>
-          <div className="grid gap-5 md:grid-cols-3">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             <div className="rounded-3xl border border-gold/25 bg-surface p-7 backdrop-blur-2xl transition hover:border-gold/50 hover:shadow-gold">
               <span className="grid size-12 place-items-center rounded-2xl bg-gold-gradient text-xl text-primary-foreground shadow-gold">✧</span>
               <h3 className="mt-5 font-display text-3xl text-foreground">Unhas</h3>
@@ -180,6 +180,15 @@ function Index() {
                 para o seu resultado durar muito mais.
               </p>
               <p className="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-gold">A PARTIR DE R$ 55</p>
+            </div>
+            <div className="rounded-3xl border border-gold/25 bg-surface p-7 backdrop-blur-2xl transition hover:border-gold/50 hover:shadow-gold">
+              <span className="grid size-12 place-items-center rounded-2xl bg-gold-gradient text-xl text-primary-foreground shadow-gold">❁</span>
+              <h3 className="mt-5 font-display text-3xl text-foreground">Sombrancelha com henna</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                Design de sombrancelha com henna, alinhando formato, preenchimento
+                e simetria para um olhar marcado e natural.
+              </p>
+              <p className="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-gold">A PARTIR DE R$ 45</p>
             </div>
           </div>
         </section>
